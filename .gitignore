@@ -1,0 +1,12 @@
+# ignore input data
+data/Kanye West
+data/Taylor Swift
+
+# environment configs
+scripts/__pycache__/config.cpython-310.pyc
+
+
+## virtual environment
+.venv
+venv
+env
