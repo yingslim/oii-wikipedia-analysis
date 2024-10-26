@@ -7,7 +7,7 @@ Do major events around celebrities catalyze public information production in the
 - Hypothesis 2: Major events enhance the velocity of information curation, as evidenced by a frequency increase in Wikipedia page edits.
 
 ## Research plan: 
-**Unit of Analysis**: Wikipedia edit
+**Unit of Analysis**: Wikipedia edit <br/>
 **Object of Interest**: 
 1. Velocity of information curation from celebrities’ activity -> edit frequency
 2. Width of information creation from celebrities’ activity -> number of interlinked internal/external information sources
