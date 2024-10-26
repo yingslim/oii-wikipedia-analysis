@@ -1,9 +1,14 @@
 # ignore input data
 data/Kanye West
 data/Taylor Swift
+data/
 
 # environment configs
 scripts/__pycache__/config.cpython-310.pyc
+.DS_Store
+__pycache__/
+*.py[cod]
+scripts/.DS_Store
 
 
 ## virtual environment
