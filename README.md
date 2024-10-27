@@ -2,22 +2,26 @@
 This is a group project for OII's social data science class. <br/>
 
 ## Research question: 
-Does the media play a role in exacerbating social biases during conflicts between major pop stars? <br/>
+Do major events around celebrities catalyze public information production in the digital sphere? <br/>
+- Hypothesis 1: Major events amplify the breadth of the information network surrounding a celebrity, as evidenced by a complexified interlinked information source network.
+- Hypothesis 2: Major events enhance the velocity of information curation, as evidenced by a frequency increase in Wikipedia page edits.
 
 ## Research plan: 
-<u>Unit of Analysis:</u> Text data from Wikipedia
-<u>Object of Interest:</u> Taylor Swift and Kenya West
-<u>Operationalisation:<u>
-- Fetch edit histories of page Taylor Swift and Kanye West
-- Time series analysis to see how the edit amounts corresponds to their conflicts
-- Compare if there’s significant differences on edits / contradictory edits (wiping facts and write in contradictory arguments) between the two
-- Whether it Gender bias? racial bias? What kind of bias? 
-- Collective memory creation?
-- Public sphere to judge public figures?
+**Unit of Analysis**: Wikipedia edit <br/>
+**Object of Interest**: 
+1. Velocity of information curation from celebrities’ activity -> edit frequency
+2. Width of information creation from celebrities’ activity -> number of interlinked internal/external information sources
+
+**Operationalisation**:
+1. Fetch edit histories of page Taylor Swift and Kanye West
+2. Time series analysis to see how the edit amounts corresponds to their conflicts
+3. Compare if there’s significant differences on edits / contradictory edits (wiping facts and write in contradictory arguments) between the two
+   - Gender bias?
+   - Collective information creation reflected through the proliferated interlinks?
+4. Editor analysis, common editors updating both public figures' pages
 
 
 ## Setup your environment
-
 1.Setup python path: ```export PYTHONPATH="scripts"```<br/>
 2. Create virtual environment on your termianl: ``` python -m venv .venv```<br/>
 3. Install python libraries and dependencies: ```pip install -r requirements.txt``` <br/>
