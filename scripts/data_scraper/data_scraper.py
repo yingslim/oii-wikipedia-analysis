@@ -1,11 +1,19 @@
 import os
 
-from config import *
+# from config import *
 import pandas as pd
 
+CURR_DIR = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/")
+PROJECT_ROOT =  os.path.dirname(CURR_DIR).replace("\\", "/")
+
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data').replace("\\", "/")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output').replace("\\", "/")
+
+print(CURR_DIR)
+
 # Define articles we want to download
-article1 = "Taylor Swift"
-article2 = "Kanye West"
+article1 = "Taylor_Swift"
+article2 = "Kanye_West"
 
 # Create necessary directories if they don't exist
 os.makedirs(DATA_DIR, exist_ok=True)

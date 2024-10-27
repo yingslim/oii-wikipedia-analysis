@@ -1,9 +1,18 @@
+import os
 import argparse
 from pathlib import Path
 import pandas as pd
 from bs4 import BeautifulSoup
-from config import *
+# from config import *
 from tqdm import tqdm
+
+CURR_DIR = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/")
+PROJECT_ROOT =  os.path.dirname(CURR_DIR).replace("\\", "/")
+
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data').replace("\\", "/")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output').replace("\\", "/")
+
+print(CURR_DIR)
 
 def parse_revision_xml(xml_content: str, include_text: bool = False) -> dict:
     """Parse a single revision XML string into a dictionary."""
@@ -45,20 +54,22 @@ def process_article_directory(article_dir: Path, batch_size: int = 1000, include
     """Process all revisions for an article into a single DataFrame."""
     # Collect all XML files for this article
     xml_files = []
-    for year_dir in article_dir.iterdir():
-        if not year_dir.is_dir():
-            continue
-        for month_dir in year_dir.iterdir():
-            if not month_dir.is_dir():
-                continue
-            for day_dir in month_dir.iterdir():
-                if not day_dir.is_dir():
-                    continue
-                xml_files.extend(day_dir.glob("*.xml"))
-    
+    print(article_dir)
+    # for year_dir in article_dir.iterdir():
+    #     if not year_dir.is_dir():
+    #         continue
+    #     for month_dir in year_dir.iterdir():
+    #         if not month_dir.is_dir():
+    #             continue
+    #         for day_dir in month_dir.iterdir():
+    #             if not day_dir.is_dir():
+    #                 continue
+    #             xml_files.extend(day_dir.glob("*.xml"))
+    xml_files.extend(article_dir.glob("**/*.xml"))
+    print(xml_files)
     if not xml_files:
         return None
-    
+    print(xml_files)
     # Process files in batches
     dataframes = []
     for i in tqdm(range(0, len(xml_files), batch_size),
@@ -115,7 +126,6 @@ def main(data_dir: Path, output_dir: Path, batch_size: int = 1000, include_text:
     for article_dir in data_dir.iterdir():
         if not article_dir.is_dir():
             continue
-        
         df = process_article_directory(article_dir, batch_size, include_text)
         
         if df is not None:
