@@ -2,7 +2,7 @@
 This is a group project for OII's social data science class. <br/>
 
 ## Research question: 
-Do major events around celebrities catalyze public information production in the digital sphere? <br/>
+How do celebrities' social events influence content curation on Wikipedia? <br/>
 - Hypothesis 1: Major events amplify the breadth of the information network surrounding a celebrity, as evidenced by a complexified interlinked information source network.
 - Hypothesis 2: Major events enhance the velocity of information curation, as evidenced by a frequency increase in Wikipedia page edits.
 
