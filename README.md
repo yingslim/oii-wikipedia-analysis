@@ -46,6 +46,3 @@ Any files from the analysis will be uploaded in this folder. Upload it on [our d
 
 ### Deck
 PDF version of our presentation slides.
-
-
-# wikipedia_project
