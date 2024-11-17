@@ -30,10 +30,10 @@ How do celebrities' social events influence content curation on Wikipedia? <br/>
 Section describes the project structure of this repository.
 
 ### Scripts
-Folder contains all of the scripts. 
-2. [data_scraper](scripts\data_scraper\README.md): To scrape the related dataset from wikipedia.  Data scraped will be sent to `./data` directory directly (scraped XML files and processed DataFrames). You can find the raw data on [our drive](https://drive.google.com/drive/folders/1JdVMY3asgYR94n4M4ifBRCqP4cNXIyu0?usp=sharing). (Warning: It is a large zip file!). <br/>
-2. [utils](scripts\utils\README.md): Contains helper functions to import data, plot graphs and for data processing purposes.<br/>
-3. `data_analysis.ipynb`: To visualise graphs/relationships.<br/>
+Folder contains all of the scripts. <br/>
+1. [data_scraper](scripts\data_scraper\README.md): To scrape the related dataset from wikipedia. Data scraped will be sent to `./data` directory directly (scraped XML files and processed DataFrames). You can find the raw data on [our drive](https://drive.google.com/drive/folders/1JdVMY3asgYR94n4M4ifBRCqP4cNXIyu0?usp=sharing). (Warning: It is a large zip file!). <br/>
+2. [utils](scripts\utils\README.md): Contains helper functions to import data, plot graphs and for data processing purposes. <br/>
+2. `data_analysis.ipynb`: To visualise graphs/relationships. <br/>
 
 ### Data
 Import the scraped data from [our drive](https://drive.google.com/drive/folders/1JdVMY3asgYR94n4M4ifBRCqP4cNXIyu0?usp=drive_link) and upload them in this folder.
