@@ -10,10 +10,11 @@ pip install .
 NB: Remember to use some kind of virtual environment to avoid a world of pain!
 
 ## Usage
-This repository contains two main scripts for working with Wikipedia revisions:
+This repository contains two main scripts for working with Wikipedia revisions: </br>
+The commands are found in `data_scraper.py`.
 
 ### 1. Downloading Revisions
-The script `download_wiki_revisions.py` downloads all revisions of a given Wikipedia page and organizes them into a directory structure by year and month. Usage:
+The script `download_wiki_revisions.py` downloads all revisions of a given Wikipedia page and organizes them into a directory structure by year, month and day. Usage:
 ```bash
 usage: download_wiki_revisions.py [-h] [--data-dir DATA_DIR] [--count-only] page
 
@@ -91,3 +92,4 @@ python xml_to_dataframe.py --data-dir ./data --output-dir ./DataFrames
 ```bash
 python xml_to_dataframe.py --data-dir ./data --output-dir ./DataFrames --include-text
 ```
+

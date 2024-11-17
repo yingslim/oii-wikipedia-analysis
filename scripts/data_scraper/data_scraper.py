@@ -1,15 +1,11 @@
+import sys
 import os
 
-# from config import *
+# Add the parent directory to sys.path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from config import *
 import pandas as pd
-
-CURR_DIR = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/")
-PROJECT_ROOT =  os.path.dirname(CURR_DIR).replace("\\", "/")
-
-DATA_DIR = os.path.join(PROJECT_ROOT, 'data').replace("\\", "/")
-OUTPUT_DIR = os.path.join(PROJECT_ROOT, 'output').replace("\\", "/")
-
-print(CURR_DIR)
 
 # Define articles we want to download
 article1 = "Taylor_Swift"
@@ -19,11 +15,11 @@ article2 = "Kanye_West"
 os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(os.path.join(DATA_DIR, "DataFrames"), exist_ok=True)
 
-# # Download revisions for both articles
-# print("Downloading revisions for first article...")
-# os.system(f'python scripts/data_scraper/download_wiki_revisions.py "{article1}"')
-# print("\nDownloading revisions for second article...")
-# os.system(f'python scripts/data_scraper/download_wiki_revisions.py "{article2}"')
+# Download revisions for both articles    # uncomment this to rerun scraper
+print("Downloading revisions for first article...")
+os.system(f'python scripts/data_scraper/download_wiki_revisions.py "{article1}"')
+print("\nDownloading revisions for second article...")
+os.system(f'python scripts/data_scraper/download_wiki_revisions.py "{article2}"')
 
 # Convert all downloaded revisions to DataFrames
 print("\nConverting revisions to DataFrames...")
