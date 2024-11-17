@@ -1,4 +1,4 @@
-# wikipedia_analysis 
+# Wikipedia Dataset analysis
 This is a group project for OII's social data science class. <br/>
 
 ## Research question: 
