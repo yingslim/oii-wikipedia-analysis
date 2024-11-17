@@ -39,7 +39,7 @@ Folder contains all of the scripts. <br/>
 Import the scraped data from [our drive](https://drive.google.com/drive/folders/1JdVMY3asgYR94n4M4ifBRCqP4cNXIyu0?usp=drive_link) and upload them in this folder.
 
 ### Network
-Contains the gephi format to plot the network.
+Contains the `gephi` format to plot the network.
 
 ### Output
 Contains png and html of plots
